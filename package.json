@@ -1,0 +1,30 @@
+{
+  
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverLogic.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iHnor/HTTP-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iHnor/HTTP-server/issues"
+  },
+  "homepage": "https://github.com/iHnor/HTTP-server#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.8",
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "@babel/core": "^7.14.8",
+    "babel-jest": "^27.0.6"
+  }
+}
