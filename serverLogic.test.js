@@ -45,5 +45,17 @@ describe('Server logic ', () => {
             expect(logic.wordFrequency('?dou, dou. dou!')).toEqual(map)
         });
     });
+    
+    it('Create unique words', () => {
+        let uniqueWord = `dou `
+
+        expect(logic.uniqueWords(logic.frequencyMap)).toBe(uniqueWord)
+    });
+
+    it('Create frequent words', () => {
+        let fqWords = `red black `
+
+        expect(logic.frequentWords(logic.frequencyMap)).toBe(fqWords)
+    });
 });
     

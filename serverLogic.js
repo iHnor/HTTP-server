@@ -1,3 +1,9 @@
+export const frequencyMap = new Map([
+    ["red",     2],
+    ["dou",     1],
+    ["black",   2]
+]);
+
 export function pluralization(numberOfOld, words) {
 
     let sNumb = numberOfOld % 10
@@ -30,3 +36,37 @@ export function wordFrequency (text){
     return map;
 };
 
+export function objectJSON(mapFrequency){
+    let objJSON = {}
+
+    mapFrequency.forEach((value, key) =>{
+        objJSON[key] = value;
+    })
+    return objJSON;
+}
+
+export function uniqueWords(mapFrequency){
+    let words = ''
+
+    mapFrequency.forEach((value, key) =>{
+        if (value === 1)
+            words += `${key} `  
+    })
+    return words; 
+}
+
+export function frequentWords(mapFrequency){
+    let max = 0;
+    let frequentWordsList = ''
+
+    mapFrequency.forEach((value, key) => {
+        if (value > max)
+            max = value;
+    })
+
+    mapFrequency.forEach((value, key) =>{
+        if (value === max)
+            frequentWordsList += `${key} `
+    })
+    return frequentWordsList
+}
